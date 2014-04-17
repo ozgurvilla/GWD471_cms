@@ -1,8 +1,8 @@
 <header>
     	<h1>Welcome to Widgco</h1>
         <nav>
-        	<a href="">Home</a>
-            <a href="">About</a>
-			<a href="">Contact</a>
+        	<a href="index.php" class="home_link">Home</a>
+            <a href="about.php" class="home_link">About</a>
+			<a href="contact.php" class="home_link">Contact</a>
         </nav>
-</header>
+     </header>
