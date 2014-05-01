@@ -7,21 +7,21 @@
       require_once('includes/validation.php');
     
     
-      $name = $_POST['name'];
-      $email = $_POST['email'];
-      $comments = $_POST['comments'];
+      $name = trim($_POST['name']);
+      $email = trim($_POST['email']);
+      $comments = trim($_POST['comments']);
       $errors = array();
     
     // test user info for non_valid data
       $valid = verifyAlphaNum($name);
     if(!$valid)
     {
-      $errors[] = "Name must be letters, numbers, or spaces";
+      $errors['name'] = "Name must be letters, numbers, or spaces";
     }
     $valid = verifyEmail($email);
     if(!$valid)
     {
-      $errors[] = "please provide a valid email address - test@test.com";
+      $errors['email'] = "please provide a valid email address - test@test.com";
     }
     $comments = verifyText($comments);
 	
@@ -71,7 +71,8 @@
         <fieldset>
           <p><legend>Contact Us</legend></p>
           <p><label for="name">Name: </label>
-          <input type="text" name="name" placeholder="Type your name here" />
+            <span class="errors"><?php echo @$errors['name']; ?></span>
+          <input type="text" name="name" placeholder="Type your name here""<?php echo @$_POST['name']; ?>" />
           </p>
           
           <p>
@@ -81,7 +82,10 @@
           </p>
             <p>
               <label for="comments">Comments:</label>
-          <textarea name="comments" name="comments" placeholder="type your message here"></textarea>
+              <span class="errors"><?php echo @$errors['email']; ?></span>
+          <textarea name="comments" name="comments" placeholder="type your message here">
+           <?php echo @$_POST['email']; ?>   
+          </textarea>
           </P>
           
             <p>
