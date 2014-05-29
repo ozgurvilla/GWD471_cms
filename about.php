@@ -1,6 +1,43 @@
- 
+<style>
+  #home .home_link,
+#about .about_link,
+#contact .contact_link {
+  color:red;
+}
+  .errors {display:block; color:red;}
+.products {width:200px; border:medium; padding:15px; float:left;}
+.product img {width:170p; height:100px; background:#ccc;}
+.clear {clear:both;}
+
+label, textarea, input {display:block;}
+</style>
+
+
+
 <?php $page_id = 'about'; ?>
   <?php require_once('../../config.php')?>
+<?php
+//get all the content to the selected page
+$sql = "
+SELECT *
+FROM site_content
+WHERE page_name='about'";
+
+$myData = $db->query($sql);
+
+//create container for each piece of data
+while($row = $myData->fetch_assoc())
+{
+  if($row['section_name'] === 'blurb')
+  {
+   $blurb = $row['content']; 
+  }
+  if($row['section_name'] === 'blurb')
+  {
+   $intro = $row['content']; 
+  }
+}
+  ?>
   <?php
   //interact wit DB
   $sql = 'SELECT * FROM widgeco';
@@ -13,10 +50,12 @@
   $db->close();
 
   ?>
+
   <?php require_once('includes/top.php')?>
   <?php require_once('includes/header.php')?>
      <section>
      	<h2>About</h2>
+       <p><?php echo $intro; ?></p>
      	<?php 
         echo '<div id="products">';
         while($row = $myData->fetch_assoc())

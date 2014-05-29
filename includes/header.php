@@ -6,3 +6,10 @@
 			<a href="contact.php" class="home_link">Contact</a>
         </nav>
      </header>
+
+<style>
+h1{
+ color:red; 
+}
+  
+</style>
