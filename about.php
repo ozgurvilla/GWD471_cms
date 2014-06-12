@@ -1,21 +1,7 @@
-<<<<<<< HEAD
+
  
 <?php $page_id = 'about'; ?>
   <?php require_once('../../config.php')?>
-=======
-<style>
-  #home .home_link,
-#about .about_link,
-#contact .contact_link {
-  color:red;
-}
-  .errors {display:block; color:red;}
-.products {width:200px; border:medium; padding:15px; float:left;}
-.product img {width:170p; height:100px; background:#ccc;}
-.clear {clear:both;}
-
-label, textarea, input {display:block;}
-</style>
 
 
 
@@ -43,7 +29,7 @@ while($row = $myData->fetch_assoc())
   }
 }
   ?>
->>>>>>> FETCH_HEAD
+
   <?php
   //interact wit DB
   $sql = 'SELECT * FROM widgeco';
@@ -56,18 +42,14 @@ while($row = $myData->fetch_assoc())
   $db->close();
 
   ?>
-<<<<<<< HEAD
-=======
 
->>>>>>> FETCH_HEAD
   <?php require_once('includes/top.php')?>
   <?php require_once('includes/header.php')?>
      <section>
      	<h2>About</h2>
-<<<<<<< HEAD
-=======
+
        <p><?php echo $intro; ?></p>
->>>>>>> FETCH_HEAD
+
      	<?php 
         echo '<div id="products">';
         while($row = $myData->fetch_assoc())
