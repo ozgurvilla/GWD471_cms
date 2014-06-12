@@ -3,7 +3,7 @@
 #contact .contact_link {
   color:red;
 }
-<<<<<<< HEAD
+
 label {display:block;}
 .errors {display:block;color:red;}
 .product {width:200px; border:medium; padding:15px; float:left;}
@@ -18,4 +18,4 @@ label {display:block;}
 
 label, textarea, input {display:block;}
 
->>>>>>> FETCH_HEAD
+
