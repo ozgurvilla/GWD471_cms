@@ -1,10 +1,10 @@
 <?php
 $page_id = 'update';
 require_once('../../../config.php');
-<<<<<<< HEAD
+
 
 require_once('../includes/top.php');
-=======
+
 require_once('../includes/top.php');
 //catch user selection from dropdown and sanitize
 $tmp = @$_GET['p'];
@@ -62,13 +62,13 @@ if(isset($_POST['submitted']))
   header('Location: ../');
 }
 
->>>>>>> FETCH_HEAD
+
 ?>
 <link rel="stylesheet" href="../css/main.css" />
 
 
 <h1> Update Page </h1>
-<<<<<<< HEAD
+
 <form action="" method="post">
   
   <fieldset>
@@ -85,7 +85,7 @@ if(isset($_POST['submitted']))
     
     <label for"body">body</label>
     <textarea name="body" rows="10" cols="30"></textarea>
-=======
+
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
   
   <fieldset>
@@ -107,7 +107,7 @@ if(isset($_POST['submitted']))
     <textarea name="body" rows="10" cols="30">
       <?php echo $blurb; ?>
     </textarea>
->>>>>>> FETCH_HEAD
+
     
     <input type="submit" name="submitted" value="update now" />
     
@@ -115,8 +115,8 @@ if(isset($_POST['submitted']))
   </fieldset>
 </form>
 
-<<<<<<< HEAD
-=======
+
+
 <script>
   window.onload = function(){
     document.getElementById("<?php echo $page; ?>").selected = 'selected';
@@ -126,7 +126,7 @@ if(isset($_POST['submitted']))
     window.location = './update.php?p=' + obj.value;
   }
 </script>
->>>>>>> FETCH_HEAD
+
 
 
 <?php require_once('../includes/footer.php'); ?>
