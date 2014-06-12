@@ -1,0 +1,4 @@
+[07-May-2014 19:29:03 America/Denver] PHP Warning:  require_once(../../config.php): failed to open stream: No such file or directory in /home2/ankarama/public_html/GWD471_cms/about.php on line 3
+[07-May-2014 19:29:03 America/Denver] PHP Fatal error:  require_once(): Failed opening required '../../config.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home2/ankarama/public_html/GWD471_cms/about.php on line 3
+[07-May-2014 19:29:25 America/Denver] PHP Warning:  require_once(../../config.php): failed to open stream: No such file or directory in /home2/ankarama/public_html/GWD471_cms/about.php on line 3
+[07-May-2014 19:29:25 America/Denver] PHP Fatal error:  require_once(): Failed opening required '../../config.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home2/ankarama/public_html/GWD471_cms/about.php on line 3
